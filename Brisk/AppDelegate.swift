@@ -1,4 +1,5 @@
 import AppKit
+import MASShortcut
 
 @NSApplicationMain
 final class AppDelegate: NSObject, NSApplicationDelegate {
@@ -16,7 +17,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         StoryboardRouter.reloadTopWindowController()
-        GlobalHotKey.register()
+        MASShortcutBinder.shared().bindShortcut(withDefaultsKey: "globalNewRadarHotkey") {
+            NSDocumentController.shared().newDocument(nil)
+        }
     }
 
     func applicationShouldOpenUntitledFile(_ sender: NSApplication) -> Bool {

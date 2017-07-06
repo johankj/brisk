@@ -75,6 +75,7 @@
 
 /* Begin PBXFileReference section */
 		0018868F17477C7D609957AD /* Pods_BriskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BriskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04848C001F0E42C9006D8C39 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		45F9233FBE2D1D0D4ABF530C /* Pods-Brisk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.debug.xcconfig"; sourceTree = "<group>"; };
 		7DD69D9F6507E9D3006DC976 /* Pods-BriskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BriskTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BriskTests/Pods-BriskTests.release.xcconfig"; sourceTree = "<group>"; };
 		9002A6E26E9C2D617DFB9460 /* Pods-Brisk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.release.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +227,7 @@
 				C27F3B711D8B239B00EA3B7D /* Constants.swift */,
 				C20DDC131D1652C20086D304 /* Keychain.swift */,
 				C20DDC171D16771A0086D304 /* StoryboardRouter.swift */,
+				04848C001F0E42C9006D8C39 /* Bridging-Header.h */,
 			);
 			path = Brisk;
 			sourceTree = "<group>";
@@ -671,6 +673,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -700,6 +703,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
@@ -714,6 +718,7 @@
 				INFOPLIST_FILE = Brisk/Resources/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.Brisk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Brisk/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -728,6 +733,7 @@
 				INFOPLIST_FILE = Brisk/Resources/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.Brisk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Brisk/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

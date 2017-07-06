@@ -5,6 +5,7 @@ use_frameworks!
 target :Brisk do
   pod "Sonar", :git => "https://github.com/br1sk/Sonar.git"
   pod "Sparkle"
+  pod "MASShortcut"
 end
 
 target :BriskTests do

@@ -1,10 +1,12 @@
 PODS:
   - Alamofire (4.4.0)
+  - MASShortcut (2.3.6)
   - Sonar (0.0.1):
     - Alamofire (~> 4.4.0)
   - Sparkle (1.17.0)
 
 DEPENDENCIES:
+  - MASShortcut
   - Sonar (from `https://github.com/br1sk/Sonar.git`)
   - Sparkle
 
@@ -19,9 +21,10 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  MASShortcut: 9c215e8a8a78f3d01ce56da48e2730ab66b538fa
   Sonar: edb54e18872e0d23052f60e453edef60ba4ac5fa
   Sparkle: ccfb47699feea7b40b51cf3176f69404e5b1da6c
 
-PODFILE CHECKSUM: 047ef46a51dbabde0daf90ad244205e82fadb5c2
+PODFILE CHECKSUM: 3d8cc2639b56933dd7d8bc76c9b1a282eb0f4172
 
 COCOAPODS: 1.2.1

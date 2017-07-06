@@ -967,18 +967,21 @@ DQ
                 </viewController>
                 <customObject id="3de-qA-hG7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1630" y="1088.5"/>
+            <point key="canvasLocation" x="1630" y="1162"/>
         </scene>
         <!--General-->
         <scene sceneID="CIr-IC-boF">
             <objects>
                 <viewController title="General" showSeguePresentationStyle="single" id="9Nh-eM-d2p" sceneMemberID="viewController">
                     <view key="view" id="yLd-6I-DVb">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="61"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="P60-fg-bV0">
-                                <rect key="frame" x="165" y="22" width="120" height="18"/>
+                                <rect key="frame" x="165" y="55" width="120" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="5nk-WO-ddg"/>
+                                </constraints>
                                 <buttonCell key="cell" type="check" title="Show Dock Icon" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="qTh-O2-m75">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -988,26 +991,49 @@ DQ
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JeI-yg-d2G">
-                                <rect key="frame" x="289" y="23" width="91" height="14"/>
+                                <rect key="frame" x="289" y="56" width="91" height="14"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Requires Restart" id="wWL-dM-Tgf">
                                     <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajJ-SF-ewy">
+                                <rect key="frame" x="183" y="20" width="117" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="New Radar Hotkey" id="Ffe-84-88W">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="ly1-yl-CUH" customClass="MASShortcutView">
+                                <rect key="frame" x="39" y="17" width="140" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19" id="Jfg-IF-dBc"/>
+                                    <constraint firstAttribute="width" constant="140" id="j3S-Ca-iED"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="associatedUserDefaultsKey" value="globalNewRadarHotkey"/>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="P60-fg-bV0" firstAttribute="centerY" secondItem="yLd-6I-DVb" secondAttribute="centerY" id="BDf-bH-0H1"/>
+                            <constraint firstItem="P60-fg-bV0" firstAttribute="top" secondItem="yLd-6I-DVb" secondAttribute="top" constant="20" id="FCc-9m-iW4"/>
+                            <constraint firstItem="ajJ-SF-ewy" firstAttribute="leading" secondItem="ly1-yl-CUH" secondAttribute="trailing" constant="6" id="QZm-rC-u3T"/>
                             <constraint firstItem="JeI-yg-d2G" firstAttribute="baseline" secondItem="P60-fg-bV0" secondAttribute="baseline" id="XBe-y1-RRm"/>
+                            <constraint firstItem="ajJ-SF-ewy" firstAttribute="centerY" secondItem="ly1-yl-CUH" secondAttribute="centerY" constant="-2" id="Y72-ZY-wZe"/>
+                            <constraint firstAttribute="bottom" secondItem="ajJ-SF-ewy" secondAttribute="bottom" constant="20" id="YBm-6e-s9i"/>
+                            <constraint firstItem="ajJ-SF-ewy" firstAttribute="leading" secondItem="P60-fg-bV0" secondAttribute="leading" constant="18" id="ZOQ-2L-DIe"/>
                             <constraint firstItem="P60-fg-bV0" firstAttribute="centerX" secondItem="yLd-6I-DVb" secondAttribute="centerX" id="mHe-se-yn7"/>
                             <constraint firstItem="JeI-yg-d2G" firstAttribute="leading" secondItem="P60-fg-bV0" secondAttribute="trailing" constant="8" id="mTk-Hs-hNq"/>
+                            <constraint firstItem="ajJ-SF-ewy" firstAttribute="top" secondItem="P60-fg-bV0" secondAttribute="bottom" constant="20" id="wBa-sF-4Cb"/>
                         </constraints>
                     </view>
                 </viewController>
                 <customObject id="UUw-AB-3Cu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="o1V-1w-axy"/>
             </objects>
-            <point key="canvasLocation" x="1630" y="958.5"/>
+            <point key="canvasLocation" x="1630" y="1004"/>
         </scene>
         <!--Open Radar-->
         <scene sceneID="UJb-pK-qqg">
@@ -1065,7 +1091,7 @@ DQ
                 </viewController>
                 <customObject id="dg4-4Q-65E" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1630" y="1226.5"/>
+            <point key="canvasLocation" x="1630" y="1300"/>
         </scene>
         <!--New Radar-->
         <scene sceneID="bIb-re-9Xr">
